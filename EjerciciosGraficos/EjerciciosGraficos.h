@@ -9,6 +9,7 @@ public:
 	~EjerciciosGraficos()
 	{
 	}
+	void Cuadrado(CG::Gdi& gdi, int posicionx, int posiciony, int sideLenght);
 protected:
 	//______ Wintempla GUI manager section begin: DO NOT EDIT AFTER THIS LINE
 protected:

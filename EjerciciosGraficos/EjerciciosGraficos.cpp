@@ -13,11 +13,12 @@ void EjerciciosGraficos::Window_Open(Win::Event& e)
 void EjerciciosGraficos::Window_Paint(Win::Event& e)
 {
 	CG::Gdi gdi(hWnd, true, false);
-	const int ancho = this->width;
-	const int alto = this->height;
-	gdi.Line(0, 0, ancho,alto);
-	gdi.Line(ancho, 0,0, alto);
-	gdi.Line(ancho/2, 0, ancho/2, alto);
-	gdi.Line(0, alto/2, ancho, alto/2);
+	RECT rect;
+	rect.left = 100;
+	rect.right = 200;
+	rect.top = 120;
+	rect.bottom = 220;
+	gdi.Rectangle(rect);
 }
+
 
