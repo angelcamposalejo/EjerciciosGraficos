@@ -13,6 +13,11 @@ void EjerciciosGraficos::Window_Open(Win::Event& e)
 void EjerciciosGraficos::Window_Paint(Win::Event& e)
 {
 	CG::Gdi gdi(hWnd, true, false);
-	gdi.TextOutCenter(width / 2, height / 2, L"Hola mundo", true, true);
+	const int ancho = this->width;
+	const int alto = this->height;
+	gdi.Line(0, 0, ancho,alto);
+	gdi.Line(ancho, 0,0, alto);
+	gdi.Line(ancho/2, 0, ancho/2, alto);
+	gdi.Line(0, alto/2, ancho, alto/2);
 }
 
